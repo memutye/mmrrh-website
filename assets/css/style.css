@@ -1,0 +1,254 @@
+:root{
+    --primary: #179BAE;
+    --hover-primary: #0e7f91;
+    --white:    #fff;
+    --gray: #efefef;
+    --gray-100: #f7f7f7;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --green-100: #65B741;
+    --green-200: #379237;
+    --green-300: #54B435; 
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* HEADER STYLE */
+header .top{
+    background: var(--primary);
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+header .bottom{
+    margin: 0px 40px;
+    /* background-image: url('../images/img1.jpg');
+    background-repeat: no-repeat;
+    background-position-y: -400px;
+    background-size: cover; */
+    /* opacity: 0.3; */
+}
+header .bottom .middle img{
+    width: 95px;
+    height: 95px;
+}
+header .bottom nav{
+    background: var(--primary);
+    width: 100%;
+    margin: 0px;
+}
+header .bottom nav ul li{
+    margin: 0px;
+    text-align: center;
+    width: 100%;
+}
+header .bottom nav ul li:hover{
+    background: var(--hover-color);
+}
+header .bottom nav ul li a{
+    color: var(--white);
+    margin: 0px;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 10px;
+    border-right: 2px solid var(--gray);
+    text-align: center;
+    text-wrap: nowrap;
+}
+header .bottom nav ul li a:hover{
+    color: var(--gray);
+    font-weight: 600;
+}
+header .bottom nav ul li ul{
+    background: var(--primary);
+    border: none;
+}
+header .bottom nav ul li ul li a{
+    border: none;
+}
+header .bottom nav ul li ul a:hover{
+    background: var(--hover-primary);
+    font-weight: 600;
+}
+
+header .content h2{
+    letter-spacing: 0.5em;
+}
+
+/* MAIN STYLE */
+h2, h3, h4{
+    color: var(--primary);
+}
+main{
+    margin: 3em 0em;
+    margin-bottom: 40px;
+}
+main .carousel-inner {
+    height: 0;
+    padding-bottom: 50%; /* this sets carousel aspect ratio (4:1 here) */
+}
+.carousel-item {
+    position: absolute !important; /* Bootstrap is insistent */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.carousel-item img {
+    height: 100%; /* Bootstrap handles width already */
+    object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+main .line .left, .line .right{
+    border: 2px solid var(--gray-700);
+    width: 25%;
+    border-radius: 5px;
+}
+main .card{
+    border-radius: 1.5em;
+    /* box-shadow: 0px 10px 5px 0px var(--gray-200); */
+}
+main .btn-primary{
+    border: none;
+    background: var(--primary);
+}
+main .text-primary{
+    color: var(--primary);
+}
+main .btn-primary:hover{
+    background: var(--hover-color);
+}
+main p{
+    margin: 0;
+    font-size: 13px;
+}
+main a,
+main p a{
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+main a:hover,
+main p a:hover{
+    color: var(--hover-primary);
+}
+main h3{
+    font-size: 16px;
+    font-weight: 600;
+}
+main .card.service-box{
+    cursor: pointer;
+}
+main .card.service-box:hover{
+    box-shadow: 1px 5px 20px 1px var(--gray-500);
+    transition: 0.5s;
+}
+main .life-at-hospital .box-row{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+main .life-at-hospital .box-row .col-md-3{
+    width: 30%;
+}
+main .life-at-hospital .box-row .col-md-6{
+    width: 40%;
+}
+main .life-at-hospital .box-row .row .col-md-6{
+    width: 50%;
+}
+main .life-at-hospital .box-row .row .col-md-6 img{
+    height: 10rem;
+    width: 100%;
+}
+
+main .service-row-two .col-md-3{
+    width: 29%;
+}
+
+/* FOOTER STYLE */
+footer{
+    border-top: 1px solid var(--primary);
+}
+footer .mini{
+    background: var(--primary);
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+footer .top{
+    margin: 10px 0px;
+}
+footer .top .middle img{
+    width: 95px;
+    height: 95px;
+}
+footer .top ul li a{
+    text-decoration: none;
+    color: var(--gray-800);
+    font-size: 16px;
+}
+footer .top .mini{
+    background: var(--primary);
+}
+footer .top .mini a{
+    color: var(--gray);
+    margin: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Media screen size 650 */
+@media (max-width: 650px) {
+    header .bottom{
+        margin: 0px;
+    }
+    header .bottom .middle img{
+        width: 55px;
+        height: 55px;
+    }
+    header .bottom .middle .content h2{
+        font-size: 12px;
+    }
+    header .bottom nav ul li a{
+        border: none;
+    }
+    main {
+        padding: 0px 20px;
+    }
+    main .container{
+        padding: 5px;
+    }
+    h4{
+        font-size: 10px;
+    }
+    main .carousel{
+        display: none;
+    }
+    main .life-at-hospital .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main .life-at-hospital .row .col-md-3{
+        width: 100%;
+    }
+    main .life-at-hospital .row .col-md-6{
+        width: 100%;
+    }
+    main .life-at-hospital .box-row .row .col-md-6 .invert .col-md-6{
+        width: 100%;
+    }
+    main .service-row-two .col-md-3{
+        width: 100%;
+    }
+}
